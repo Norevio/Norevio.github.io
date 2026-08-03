@@ -214,6 +214,23 @@
   .app-card:hover { transform: translateY(-6px); border-color: var(--line-2); box-shadow: inset 0 1px 0 rgba(255,255,255,.08), var(--shadow-lg); }
   .app-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
+  .card-cta { background: none; border: 0; padding: 0; margin: 0; font: inherit; color: inherit; cursor: pointer; }
+  .card-cta:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 8px; }
+
+  .store-btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 7px 12px; border-radius: 11px;
+    font-size: 12.5px; font-weight: 650; line-height: 1; white-space: nowrap;
+    color: var(--title); background: var(--chip);
+    border: 1px solid var(--line);
+    transition: transform .3s cubic-bezier(.16,1,.3,1), background .3s ease, border-color .3s ease;
+  }
+  .store-btn svg { width: 15px; height: 15px; flex: none; }
+  .store-btn:hover { background: var(--surface-2); border-color: var(--line-2); transform: translateY(-1px); }
+  .store-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .store-btn-lg { padding: 10px 16px; border-radius: 13px; font-size: 13.5px; }
+  .store-btn-lg svg { width: 17px; height: 17px; }
+
   .app-accent { color: var(--a); }
   [data-theme="light"] .app-accent { color: var(--ad); }
 
@@ -336,6 +353,10 @@
   <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.5 9.5h17"/><path d="M3.5 14.5h17"/><path d="M12 3a15 15 0 0 1 0 18"/><path d="M12 3a15 15 0 0 0 0 18"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.8 6.8 7.3 5.4a1.5 1.5 0 0 0 1.8 0l7.3-5.4"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  <!-- Store marks: filled glyphs, unlike the stroked line icons above.
+       Use them with fill="currentColor" and no stroke. -->
+  <symbol id="i-apple" viewBox="0 0 24 24"><path d="M17.56 12.66c-.03-2.72 2.22-4.03 2.32-4.09-1.26-1.85-3.23-2.1-3.93-2.13-1.67-.17-3.26.98-4.11.98-.84 0-2.15-.96-3.54-.93-1.82.03-3.5 1.06-4.44 2.69-1.89 3.28-.48 8.14 1.36 10.8.9 1.31 1.98 2.77 3.4 2.72 1.36-.05 1.88-.88 3.53-.88 1.65 0 2.11.88 3.55.85 1.47-.02 2.4-1.33 3.3-2.65 1.04-1.52 1.47-2.99 1.49-3.07-.03-.01-2.86-1.1-2.89-4.36z"/><path d="M14.86 4.79c.74-.9 1.25-2.16 1.11-3.41-1.08.04-2.38.72-3.15 1.62-.69.79-1.3 2.07-1.14 3.29 1.2.09 2.43-.61 3.18-1.5z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M3.06 2.29a1.5 1.5 0 0 0-.31.94v17.54c0 .36.11.68.31.93l.06.06 9.83-9.82v-.24L3.12 1.88z"/><path d="m16.19 15.33-3.24-3.25v-.24l3.25-3.25.07.05 3.85 2.19c1.1.62 1.1 1.65 0 2.28l-3.86 2.19z"/><path d="m16.26 15.28-3.31-3.32-9.89 9.9c.36.38.96.43 1.63.05l11.57-6.63"/><path d="M16.26 8.64 4.69 2.02c-.67-.39-1.27-.34-1.63.05l9.89 9.89z"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
@@ -881,6 +902,7 @@ const APPS = [
     accent: '#F7B733',      // used on dark
     accentDeep: '#B57500',  // used on light (contrast)
     icon: 'ico-edugrade',
+    store: { ios: 'https://apps.apple.com/us/app/edugrade/id6782988936' },
     mockup: 'mock-edugrade',
     tagline: { en: 'Multiple-choice exam grading', vi: 'Chấm điểm thi trắc nghiệm' },
     short: {
@@ -1021,6 +1043,8 @@ const I18N = {
     'apps.h2': 'One studio, a growing family of apps',
     'apps.lead': 'Every Norevio app shares the same foundations — on-device data, careful localisation, and a single job done properly. Pick one to see what it does.',
     'card.cta': 'View details',
+    'store.ios': 'App Store', 'store.android': 'Google Play',
+    'store.aria.ios': 'Download on the App Store', 'store.aria.android': 'Get it on Google Play',
     'more.t': 'More on the way', 'more.d': 'New apps join the family as they are built.',
 
     'status.live': 'Live', 'status.beta': 'In beta', 'status.soon': 'Coming soon', 'status.planned': 'In planning',
@@ -1071,6 +1095,8 @@ const I18N = {
     'apps.h2': 'Một studio, một hệ ứng dụng đang lớn dần',
     'apps.lead': 'Mọi ứng dụng Norevio đều chung nền tảng — dữ liệu xử lý trên máy, bản địa hoá kỹ lưỡng, và làm tốt một việc duy nhất. Chọn một cái để xem chi tiết.',
     'card.cta': 'Xem chi tiết',
+    'store.ios': 'App Store', 'store.android': 'Google Play',
+    'store.aria.ios': 'Tải trên App Store', 'store.aria.android': 'Tải trên Google Play',
     'more.t': 'Còn nữa', 'more.d': 'Ứng dụng mới sẽ gia nhập hệ khi hoàn thiện.',
 
     'status.live': 'Đã phát hành', 'status.beta': 'Đang thử nghiệm', 'status.soon': 'Sắp ra mắt', 'status.planned': 'Đang lên kế hoạch',
@@ -1124,6 +1150,24 @@ function iconMarkup(app) {
   return tpl ? tpl.innerHTML : '';
 }
 
+/* Store CTAs. Only links that actually exist are rendered — an app with no
+   published store page shows nothing rather than a dead button. */
+function storeLinks(app, size) {
+  const s = app.store || {};
+  const defs = [
+    { url: s.ios,     icon: 'i-apple', label: t('store.ios'),     aria: t('store.aria.ios') },
+    { url: s.android, icon: 'i-play',  label: t('store.android'), aria: t('store.aria.android') },
+  ].filter((d) => d.url);
+  if (!defs.length) return '';
+  const cls = size === 'lg' ? 'store-btn store-btn-lg' : 'store-btn';
+  return `<span class="inline-flex flex-wrap gap-2">${defs.map((d) => `
+    <a href="${esc(d.url)}" target="_blank" rel="noopener noreferrer" class="${cls}"
+       aria-label="${esc(d.aria)} \u2014 ${esc(app.name)}">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#${d.icon}"/></svg>
+      <span>${esc(d.label)}</span>
+    </a>`).join('')}</span>`;
+}
+
 function statusPill(app) {
   return `<span class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold t-body" style="background:var(--chip)">
             <span class="status-dot st-${app.status}"></span>${esc(t('status.' + app.status))}
@@ -1143,8 +1187,8 @@ function renderFilters() {
 function renderGrid() {
   const list = filter === 'all' ? APPS : APPS.filter((a) => a.category === filter);
   const cards = list.map((app, i) => `
-    <button type="button" class="app-card reveal p-7" data-app="${app.id}"
-            style="--a:${app.accent};--ad:${app.accentDeep};transition-delay:${i * 0.06}s">
+    <article class="app-card reveal p-7" data-app="${app.id}"
+             style="--a:${app.accent};--ad:${app.accentDeep};transition-delay:${i * 0.06}s">
       <div class="relative flex items-start justify-between gap-4 w-full">
         <span class="block w-[58px] h-[58px] rounded-[16px] overflow-hidden shrink-0"
               style="box-shadow:0 10px 22px -10px ${app.accent}">${iconMarkup(app)}</span>
@@ -1163,11 +1207,14 @@ function renderGrid() {
         ${app.chips.map((c) => `<span class="rounded-lg px-2.5 py-1 text-[12px] t-muted" style="background:var(--chip)">${esc(tx(c))}</span>`).join('')}
       </span>
 
-      <span class="relative mt-6 inline-flex items-center gap-2 text-[14px] font-semibold t-title">
-        ${esc(t('card.cta'))}
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-arrow"/></svg>
+      <span class="relative mt-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
+        <button type="button" class="card-cta inline-flex items-center gap-2 text-[14px] font-semibold t-title">
+          ${esc(t('card.cta'))}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-arrow"/></svg>
+        </button>
+        ${storeLinks(app)}
       </span>
-    </button>`).join('');
+    </article>`).join('');
 
   const more = `
     <div class="more-tile reveal" style="transition-delay:${list.length * 0.06}s">
@@ -1202,6 +1249,7 @@ function openApp(id) {
 
   const mock = app.mockup ? document.getElementById(app.mockup) : null;
   const catLabel = tx((CATEGORIES.find((c) => c.id === app.category) || {}).label);
+  const stores = storeLinks(app, 'lg');
 
   modalBody.innerHTML = `
     <div class="grid lg:grid-cols-[.85fr_1fr]" style="--a:${app.accent};--ad:${app.accentDeep}">
@@ -1226,6 +1274,7 @@ function openApp(id) {
         </div>
 
         <p class="mt-6 text-[15.5px] leading-[1.75] t-body">${esc(tx(app.long))}</p>
+        ${stores ? `<div class="mt-7">${stores}</div>` : ''}
 
         <h3 class="mt-9 text-[12px] font-bold uppercase tracking-[.14em] t-faint">${esc(t('modal.features'))}</h3>
         <ul class="mt-5 grid sm:grid-cols-2 gap-x-7 gap-y-5">
@@ -1338,6 +1387,7 @@ document.getElementById('filters').addEventListener('click', (e) => {
 });
 
 document.addEventListener('click', (e) => {
+  if (e.target.closest('a[href]')) return;   // store links navigate, never open the modal
   const b = e.target.closest('[data-app]');
   if (b) { openApp(b.dataset.app); return; }
   if (e.target === modal) closeApp();
