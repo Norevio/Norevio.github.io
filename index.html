@@ -904,7 +904,7 @@ const APPS = [
     icon: 'ico-edugrade',
     store: { ios: 'https://apps.apple.com/us/app/edugrade/id6782988936' },
     mockup: 'mock-edugrade',
-    tagline: { en: 'Multiple-choice exam grading', vi: 'Chấm điểm thi trắc nghiệm' },
+    tagline: { en: 'Multiple-choice exam grading', vi: 'Chấm bài thi trắc nghiệm' },
     short: {
       en: 'Point your camera at an answer sheet — EduGrade detects and grades it in seconds. No dedicated scanner needed.',
       vi: 'Đưa phiếu trả lời vào khung camera — EduGrade nhận diện và chấm xong trong vài giây. Không cần máy quét chuyên dụng.',
@@ -921,7 +921,7 @@ const APPS = [
     features: [
       { icon: 'i-camera',  t: { en: 'Camera grading',        vi: 'Chấm bằng camera' },      d: { en: 'Detects the sheet, student ID and exam code automatically.', vi: 'Nhận diện phiếu, số báo danh và mã đề tự động.' } },
       { icon: 'i-layers',  t: { en: '2025 exam structure',   vi: 'Cấu trúc THPT 2025' },    d: { en: 'Part I multiple choice, Part II true/false, Part III short answer.', vi: 'Phần I trắc nghiệm, Phần II đúng/sai, Phần III trả lời ngắn.' } },
-      { icon: 'i-shuffle', t: { en: 'Question shuffling',    vi: 'Xáo đề nhiều mã' },       d: { en: 'Generate several exam codes from one source paper.', vi: 'Sinh nhiều mã đề từ một đề gốc, hạn chế nhìn bài.' } },
+      { icon: 'i-shuffle', t: { en: 'Question shuffling',    vi: 'Xáo đề nhiều mã' },       d: { en: 'Generate several exam codes from one source paper.', vi: 'Tạo nhiều mã đề từ một đề gốc, hạn chế quay cóp.' } },
       { icon: 'i-users',   t: { en: 'Classes & sessions',    vi: 'Quản lý lớp & đợt thi' }, d: { en: 'Store classes, students, grading history and export results.', vi: 'Lưu lớp, học sinh, lịch sử chấm và xuất kết quả.' } },
     ],
     audience: { en: 'For teachers, schools and exam prep centres.', vi: 'Dành cho giáo viên, trường học và trung tâm luyện thi.' },
@@ -936,14 +936,14 @@ const APPS = [
     accentDeep: '#C93A75',
     icon: 'ico-lova',
     mockup: 'mock-lova',
-    tagline: { en: 'Period & cycle tracking', vi: 'Tính chu kỳ kinh nguyệt' },
+    tagline: { en: 'Period & cycle tracking', vi: 'Theo dõi chu kỳ kinh nguyệt' },
     short: {
       en: 'Track your cycle and predict your next period and fertile window. No account, no backend — everything stays on your device.',
-      vi: 'Theo dõi chu kỳ, dự đoán ngày kinh và cửa sổ thụ thai. Không tài khoản, không backend — dữ liệu chỉ nằm trên máy bạn.',
+      vi: 'Theo dõi chu kỳ, dự đoán ngày hành kinh và giai đoạn dễ thụ thai. Không tài khoản, không máy chủ — dữ liệu chỉ nằm trên máy bạn.',
     },
     long: {
       en: 'Lova tracks your menstrual cycle and predicts your next period, fertile window and ovulation day. No account, no backend, no ads — your data never leaves your phone.',
-      vi: 'Lova theo dõi chu kỳ kinh nguyệt và dự đoán ngày kinh tiếp theo, cửa sổ thụ thai và ngày rụng trứng. Không tài khoản, không backend, không quảng cáo — dữ liệu không bao giờ rời khỏi máy bạn.',
+      vi: 'Lova theo dõi chu kỳ kinh nguyệt và dự đoán kỳ hành kinh tiếp theo, giai đoạn dễ thụ thai và ngày rụng trứng. Không tài khoản, không máy chủ, không quảng cáo — dữ liệu không bao giờ rời khỏi máy bạn.',
     },
     chips: [
       { en: 'Cycle calendar', vi: 'Lịch chu kỳ' },
@@ -951,10 +951,10 @@ const APPS = [
       { en: 'PIN lock',       vi: 'Khoá PIN' },
     ],
     features: [
-      { icon: 'i-calendar', t: { en: 'Visual cycle calendar', vi: 'Lịch chu kỳ trực quan' }, d: { en: 'Colour-coded period, fertile window and ovulation days.', vi: 'Tô màu kỳ kinh, cửa sổ thụ thai và ngày rụng trứng.' } },
-      { icon: 'i-note',     t: { en: 'Daily journal',         vi: 'Nhật ký hằng ngày' },     d: { en: 'Flow, symptoms, mood and free-form notes.', vi: 'Lượng máu, triệu chứng, tâm trạng và ghi chú tự do.' } },
+      { icon: 'i-calendar', t: { en: 'Visual cycle calendar', vi: 'Lịch chu kỳ trực quan' }, d: { en: 'Colour-coded period, fertile window and ovulation days.', vi: 'Tô màu ngày hành kinh, giai đoạn dễ thụ thai và ngày rụng trứng.' } },
+      { icon: 'i-note',     t: { en: 'Daily journal',         vi: 'Nhật ký hằng ngày' },     d: { en: 'Flow, symptoms, mood and free-form notes.', vi: 'Lượng kinh, triệu chứng, tâm trạng và ghi chú tự do.' } },
       { icon: 'i-chart',    t: { en: '6-month statistics',    vi: 'Thống kê 6 tháng' },      d: { en: 'Average, shortest and longest cycle length.', vi: 'Độ dài chu kỳ trung bình, ngắn nhất và dài nhất.' } },
-      { icon: 'i-lock',     t: { en: 'PIN & biometric lock',  vi: 'Khoá PIN & sinh trắc' },  d: { en: 'Local backup, never synced to any server.', vi: 'Sao lưu cục bộ, không đồng bộ lên bất kỳ máy chủ nào.' } },
+      { icon: 'i-lock',     t: { en: 'PIN & biometric lock',  vi: 'Khoá PIN & sinh trắc học' },  d: { en: 'Local backup, never synced to any server.', vi: 'Sao lưu cục bộ, không đồng bộ lên bất kỳ máy chủ nào.' } },
     ],
     audience: { en: 'Free · No ads · No account', vi: 'Miễn phí · Không quảng cáo · Không tài khoản' },
   },
@@ -970,11 +970,11 @@ const APPS = [
     tagline: { en: 'Read & manage PDFs', vi: 'Xem & quản lý PDF' },
     short: {
       en: 'A fast, distraction-free PDF reader with annotation, merging and offline library management.',
-      vi: 'Trình đọc PDF nhanh, gọn, có chú thích, ghép file và quản lý thư viện ngoại tuyến.',
+      vi: 'Trình đọc PDF nhanh gọn, có chú thích, ghép file và quản lý thư viện ngay khi ngoại tuyến.',
     },
     long: {
       en: 'A fast, distraction-free PDF reader for phones. Annotate, merge, split and organise your documents — all offline, with nothing uploaded anywhere.',
-      vi: 'Trình đọc PDF nhanh và gọn cho điện thoại. Chú thích, ghép, tách và sắp xếp tài liệu — hoàn toàn ngoại tuyến, không tải lên bất kỳ đâu.',
+      vi: 'Trình đọc PDF nhanh và gọn cho điện thoại. Chú thích, ghép, tách và sắp xếp tài liệu — hoàn toàn ngoại tuyến, không tải lên bất cứ đâu.',
     },
     chips: [
       { en: 'Annotation', vi: 'Chú thích' },
@@ -984,9 +984,9 @@ const APPS = [
     features: [
       { icon: 'i-pen',      t: { en: 'Annotate & highlight', vi: 'Chú thích & tô sáng' }, d: { en: 'Draw, highlight and add notes straight on the page.', vi: 'Vẽ, tô sáng và ghi chú thẳng lên trang.' } },
       { icon: 'i-merge',    t: { en: 'Merge & split',        vi: 'Ghép & tách file' },    d: { en: 'Combine or break apart documents in a couple of taps.', vi: 'Gộp hoặc tách tài liệu chỉ với vài thao tác.' } },
-      { icon: 'i-wifi-off', t: { en: 'Fully offline',        vi: 'Hoàn toàn ngoại tuyến' }, d: { en: 'Files never leave your device. No cloud, no account.', vi: 'File không rời khỏi máy. Không cloud, không tài khoản.' } },
+      { icon: 'i-wifi-off', t: { en: 'Fully offline',        vi: 'Hoàn toàn ngoại tuyến' }, d: { en: 'Files never leave your device. No cloud, no account.', vi: 'File không bao giờ rời khỏi máy. Không đám mây, không tài khoản.' } },
     ],
-    audience: { en: 'In planning — part of the Norevio roadmap.', vi: 'Đang lên kế hoạch — nằm trong lộ trình Norevio.' },
+    audience: { en: 'In planning — part of the Norevio roadmap.', vi: 'Chưa phát hành — nằm trong lộ trình của Norevio.' },
   },
   {
     id: 'qr',
@@ -1000,11 +1000,11 @@ const APPS = [
     tagline: { en: 'Scan codes anytime', vi: 'Quét mã mọi lúc' },
     short: {
       en: 'Instant QR and barcode scanning with a searchable history and a built-in generator.',
-      vi: 'Quét QR và mã vạch tức thì, có lịch sử tìm kiếm được và trình tạo mã tích hợp.',
+      vi: 'Quét QR và mã vạch tức thì, lưu lịch sử để tra cứu lại và có sẵn trình tạo mã.',
     },
     long: {
       en: 'Instant QR and barcode scanning that works the moment the camera opens. Keep a searchable history, generate your own codes, and share them without ads getting in the way.',
-      vi: 'Quét QR và mã vạch tức thì ngay khi mở camera. Lưu lịch sử tìm kiếm được, tự tạo mã và chia sẻ mà không bị quảng cáo chen ngang.',
+      vi: 'Quét QR và mã vạch tức thì ngay khi mở camera. Lịch sử được lưu lại để tra cứu, tự tạo mã và chia sẻ mà không bị quảng cáo chen ngang.',
     },
     chips: [
       { en: 'Instant scan', vi: 'Quét tức thì' },
@@ -1013,10 +1013,10 @@ const APPS = [
     ],
     features: [
       { icon: 'i-qr',      t: { en: 'Instant scanning', vi: 'Quét tức thì' }, d: { en: 'QR, barcode and Wi-Fi codes recognised the moment they appear.', vi: 'Nhận diện QR, mã vạch và mã Wi-Fi ngay khi xuất hiện.' } },
-      { icon: 'i-history', t: { en: 'Searchable history', vi: 'Lịch sử tìm kiếm' }, d: { en: 'Every scan kept locally so you can find it again later.', vi: 'Mọi lần quét lưu cục bộ để tìm lại về sau.' } },
+      { icon: 'i-history', t: { en: 'Searchable history', vi: 'Lịch sử tra cứu' }, d: { en: 'Every scan kept locally so you can find it again later.', vi: 'Mọi lần quét đều lưu trên máy để tìm lại sau.' } },
       { icon: 'i-sparkle', t: { en: 'Code generator',   vi: 'Trình tạo mã' }, d: { en: 'Make your own QR codes for links, text and Wi-Fi.', vi: 'Tự tạo mã QR cho liên kết, văn bản và Wi-Fi.' } },
     ],
-    audience: { en: 'In planning — part of the Norevio roadmap.', vi: 'Đang lên kế hoạch — nằm trong lộ trình Norevio.' },
+    audience: { en: 'In planning — part of the Norevio roadmap.', vi: 'Chưa phát hành — nằm trong lộ trình của Norevio.' },
   },
 ];
 
@@ -1084,53 +1084,53 @@ const I18N = {
   vi: {
     'meta.title': 'Norevio — Đổi mới · Cảm hứng · Nâng tầm',
     'nav.apps': 'Ứng dụng', 'nav.brand': 'Thương hiệu', 'nav.about': 'Về chúng tôi', 'nav.cta': 'Liên hệ',
-    'a11y.theme': 'Đổi giao diện sáng hoặc tối', 'a11y.lang': 'Chọn ngôn ngữ',
+    'a11y.theme': 'Chuyển giao diện sáng/tối', 'a11y.lang': 'Chọn ngôn ngữ',
 
     'hero.h1': '<span class="t-title">Nơi công nghệ</span><br /><span class="grad-text">gặp cảm hứng.</span>',
-    'hero.lead': 'Norevio kiến tạo các ứng dụng di động thông minh giúp cuộc sống tốt đẹp hơn mỗi ngày — riêng tư từ trong thiết kế, mỗi ứng dụng tập trung làm tốt một việc.',
+    'hero.lead': 'Norevio làm ra những ứng dụng di động thông minh, giúp việc thường ngày nhẹ nhàng hơn — quyền riêng tư được tính đến ngay từ khâu thiết kế, và mỗi ứng dụng chỉ tập trung làm thật tốt một việc.',
     'hero.cta1': 'Khám phá ứng dụng', 'hero.cta2': 'Hợp tác cùng chúng tôi',
-    'hero.s1l': 'Ứng dụng trong hệ', 'hero.s2l': 'Native trên cả hai nền tảng', 'hero.s3l': 'Dữ liệu xử lý ngay trên máy',
+    'hero.s1l': 'Ứng dụng hiện có', 'hero.s2l': 'Native trên cả iOS và Android', 'hero.s3l': 'Dữ liệu xử lý ngay trên máy',
 
     'apps.eyebrow': 'Hệ sinh thái ứng dụng',
-    'apps.h2': 'Một studio, một hệ ứng dụng đang lớn dần',
-    'apps.lead': 'Mọi ứng dụng Norevio đều chung nền tảng — dữ liệu xử lý trên máy, bản địa hoá kỹ lưỡng, và làm tốt một việc duy nhất. Chọn một cái để xem chi tiết.',
+    'apps.h2': 'Một studio, một bộ ứng dụng đang lớn dần',
+    'apps.lead': 'Mọi ứng dụng Norevio đều dựng trên cùng một nền tảng — dữ liệu xử lý ngay trên máy, bản địa hoá kỹ lưỡng, và chỉ làm thật tốt một việc. Chọn một ứng dụng để xem chi tiết.',
     'card.cta': 'Xem chi tiết',
     'store.ios': 'App Store', 'store.android': 'Google Play',
     'store.aria.ios': 'Tải trên App Store', 'store.aria.android': 'Tải trên Google Play',
-    'more.t': 'Còn nữa', 'more.d': 'Ứng dụng mới sẽ gia nhập hệ khi hoàn thiện.',
+    'more.t': 'Sắp có thêm', 'more.d': 'Ứng dụng mới sẽ được bổ sung ngay khi hoàn thiện.',
 
-    'status.live': 'Đã phát hành', 'status.beta': 'Đang thử nghiệm', 'status.soon': 'Sắp ra mắt', 'status.planned': 'Đang lên kế hoạch',
+    'status.live': 'Đã phát hành', 'status.beta': 'Đang thử nghiệm', 'status.soon': 'Sắp ra mắt', 'status.planned': 'Trong kế hoạch',
 
-    'modal.features': 'Ứng dụng làm gì', 'modal.close': 'Đóng', 'modal.platform': 'Nền tảng', 'modal.status': 'Trạng thái', 'modal.category': 'Danh mục',
+    'modal.features': 'Ứng dụng này làm gì', 'modal.close': 'Đóng', 'modal.platform': 'Nền tảng', 'modal.status': 'Trạng thái', 'modal.category': 'Danh mục',
 
     'brand.eyebrow': 'Nhận diện', 'brand.h2': 'Ý nghĩa của biểu tượng',
-    'brand.lead': 'Ba ý tưởng gói trong một biểu tượng — tia sáng của một vì sao mới, chuyển động của cực quang, và chữ cái mang tên chúng tôi.',
-    'brand.star.t': 'Nova star',   'brand.star.d': 'Sự đổi mới & tầm nhìn',
-    'brand.flow.t': 'Aurora flow', 'brand.flow.d': 'Cảm hứng & chuyển động',
+    'brand.lead': 'Ba ý tưởng cùng gói trong một biểu tượng — tia sáng của một vì sao mới, chuyển động của cực quang, và chữ cái mở đầu tên chúng tôi.',
+    'brand.star.t': 'Ngôi sao Nova', 'brand.star.d': 'Đổi mới & tầm nhìn',
+    'brand.flow.t': 'Dải cực quang',  'brand.flow.d': 'Cảm hứng & chuyển động',
     'brand.letter.t': 'Chữ N',     'brand.letter.d': 'Nhận diện & kết nối',
     'brand.sum.d': 'Đổi mới dẫn lối tương lai',
-    'brand.palette': 'Bảng màu thương hiệu', 'brand.palette.d': 'Năm màu mà mọi sản phẩm Norevio đều lấy từ đây.',
+    'brand.palette': 'Bảng màu thương hiệu', 'brand.palette.d': 'Năm màu nền tảng cho mọi sản phẩm Norevio.',
 
-    'val.eyebrow': 'Về Norevio', 'val.h2': 'Ba nguyên tắc chúng tôi không thoả hiệp',
-    'val.1t': 'Riêng tư mặc định', 'val.1d': 'Dữ liệu xử lý ngay trên thiết bị. Chúng tôi không dựng backend để thu thập những gì không cần thiết.',
-    'val.2t': 'Bản địa hoá, không phải dịch máy', 'val.2d': 'Ứng dụng của chúng tôi nói đúng ngôn ngữ của người dùng — riêng EduGrade đã có hai mươi ngôn ngữ — khớp với cách dùng từ và định dạng của từng nơi, không đẩy qua máy dịch.',
-    'val.3t': 'Làm ít, làm kỹ',    'val.3d': 'Mỗi ứng dụng giải một bài toán rõ ràng tới nơi tới chốn, thay vì nhồi tính năng cho đủ.',
+    'val.eyebrow': 'Về Norevio', 'val.h2': 'Ba nguyên tắc chúng tôi không đánh đổi',
+    'val.1t': 'Riêng tư là mặc định', 'val.1d': 'Dữ liệu được xử lý ngay trên thiết bị. Chúng tôi không dựng máy chủ để thu thập những thứ không cần thiết.',
+    'val.2t': 'Bản địa hoá, không phải dịch máy', 'val.2d': 'Ứng dụng của chúng tôi nói đúng thứ tiếng của người dùng — riêng EduGrade đã hỗ trợ 20 ngôn ngữ — dùng đúng cách nói và định dạng của từng nơi, chứ không đưa qua máy dịch.',
+    'val.3t': 'Làm ít, làm kỹ',    'val.3d': 'Mỗi ứng dụng giải một bài toán rõ ràng tới nơi tới chốn, thay vì nhồi thêm tính năng cho nhiều.',
 
-    'ct.h2': 'Có ý tưởng, góp ý hay muốn cùng xây dựng?',
+    'ct.h2': 'Bạn có ý tưởng, góp ý, hay muốn cùng xây dựng?',
     'ct.lead': 'Norevio là một studio nhỏ — mọi lời nhắn đều tới thẳng người trực tiếp làm ra sản phẩm.',
-    'ct.cta2': 'Xem lại ứng dụng',
+    'ct.cta2': 'Quay lại danh sách ứng dụng',
 
     'ft.desc': 'Studio ứng dụng di động. Đổi mới · Cảm hứng · Nâng tầm.',
     'ft.apps': 'Ứng dụng', 'ft.company': 'Công ty', 'ft.about': 'Về chúng tôi',
     'ft.privacy': 'Chính sách bảo mật', 'ft.support': 'Hỗ trợ', 'ft.contact': 'Liên hệ',
-    'ft.copy': '© 2026 Norevio. Bảo lưu mọi quyền.', 'ft.made': 'Làm cho người dùng ở khắp nơi.',
+    'ft.copy': '© 2026 Norevio. Bảo lưu mọi quyền.', 'ft.made': 'Dành cho người dùng ở khắp nơi.',
 
     'mk.edu.title': 'Quét phiếu', 'mk.edu.code': 'Mã đề 132',
     'mk.edu.student': 'Nguyễn Văn A · SBD 0142', 'mk.edu.result': '34/40 câu đúng · chấm trong 1,2s',
-    'mk.lova.month': 'Tháng 8, 2026', 'mk.lova.title': 'Chu kỳ của bạn', 'mk.lova.days': 'ngày',
-    'mk.lova.day': 'Ngày thứ 14 của chu kỳ', 'mk.lova.window': 'Cửa sổ thụ thai', 'mk.lova.ovu': 'Rụng trứng dự kiến hôm nay',
+    'mk.lova.month': 'Tháng 8/2026', 'mk.lova.title': 'Chu kỳ của bạn', 'mk.lova.days': 'ngày',
+    'mk.lova.day': 'Ngày thứ 14 của chu kỳ', 'mk.lova.window': 'Giai đoạn dễ thụ thai', 'mk.lova.ovu': 'Dự kiến rụng trứng hôm nay',
     'cal.1': 'T2', 'cal.2': 'T3', 'cal.3': 'T4', 'cal.4': 'T5', 'cal.5': 'T6', 'cal.6': 'T7', 'cal.7': 'CN',
-    'lg.period': 'Kỳ kinh', 'lg.fertile': 'Thụ thai', 'lg.ovu': 'Rụng trứng', 'lg.pred': 'Dự đoán',
+    'lg.period': 'Hành kinh', 'lg.fertile': 'Dễ thụ thai', 'lg.ovu': 'Rụng trứng', 'lg.pred': 'Dự đoán',
     'md.cramps': 'Đau bụng', 'md.tired': 'Mệt', 'md.happy': 'Vui',
   },
 };
