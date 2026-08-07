@@ -1,8 +1,1 @@
-# app-ads.txt — IAB Tech Lab spec 1.0
-# Apps: TApp PDF (iOS/Android), EduGrade (iOS/Android)
-
 google.com, pub-6818408078775821, DIRECT, f08c47fec0942fa0
-
-# Thêm mạng quảng cáo khác (mediation) mỗi dòng một entry, ví dụ:
-# unityads.unity3d.com, <publisher-id>, DIRECT
-# applovin.com, <publisher-id>, DIRECT
